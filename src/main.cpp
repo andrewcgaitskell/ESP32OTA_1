@@ -13,7 +13,7 @@ char password[] = SECRET_PASS;   // your network password
 #include <ArduinoOTA.h>
 
 
-static const uint8_t LED_BUILTIN = 2;
+//static const uint8_t LED_BUILTIN = 2;
 
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
