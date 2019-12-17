@@ -12,7 +12,12 @@ char password[] = SECRET_PASS;   // your network password
 #include <WiFiUdp.h>
 #include <ArduinoOTA.h>
 
+
+static const uint8_t LED_BUILTIN = 2;
+#define BUILTIN_LED  LED_BUILTIN // backward compatibility
+
 void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
   Serial.begin(115200);
   Serial.println("Booting");
   WiFi.mode(WIFI_STA);
@@ -71,7 +76,8 @@ void setup() {
 
 void loop() {
   ArduinoOTA.handle();
-  Serial.print("IP address: ");
-  Serial.println(WiFi.localIP());
-  delay(5000);
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);                       // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+  delay(100);                       // wait for a second
 }
