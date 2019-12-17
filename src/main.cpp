@@ -14,7 +14,6 @@ char password[] = SECRET_PASS;   // your network password
 
 
 static const uint8_t LED_BUILTIN = 2;
-#define BUILTIN_LED  LED_BUILTIN // backward compatibility
 
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
