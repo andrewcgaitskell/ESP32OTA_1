@@ -75,7 +75,7 @@ void setup() {
 
 void loop() {
   ArduinoOTA.handle();
-  Serial.print("IP address: ");
+  Serial.print("IP Address: ");
   Serial.println(WiFi.localIP());
   
   digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
